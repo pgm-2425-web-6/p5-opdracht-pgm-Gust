@@ -18,10 +18,10 @@ body {
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
-  color: #1E90FF; /* Mooier blauw */
+  color: #1E90FF;
   background: rgba(0, 0, 0, 0.7);
   padding: 10px 15px;
-  border: 2px solid #1E90FF; /* Zelfde blauw voor de rand */
+  border: 2px solid #1E90FF;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
   z-index: 20;
@@ -35,7 +35,7 @@ body {
   text-shadow: 0px 0px 5px #000;
 }
 
-/* Instructies en Play-knop */
+
 .instructions {
   text-align: center;
   position: absolute;
@@ -49,42 +49,41 @@ body {
   width: 90%;
   max-width: 500px;
   z-index: 10;
-  box-shadow: 0px 4px 30px rgba(30, 144, 255, 0.6); /* Blauwe schaduw voor stijl */
+  box-shadow: 0px 4px 30px rgba(30, 144, 255, 0.6);
   animation: fadeIn 1s ease-in-out;
 }
 
 .instructions h1 {
   font-size: 40px;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 10px rgba(30, 144, 255, 0.6); /* Blauwe gloed */
+  text-shadow: 2px 2px 10px rgba(30, 144, 255, 0.6);
 }
 
 .instructions p {
   font-size: 18px;
   margin-bottom: 30px;
   line-height: 1.6;
-  text-shadow: 1px 1px 5px rgba(30, 144, 255, 0.5); /* Blauwe schaduw voor tekst */
+  text-shadow: 1px 1px 5px rgba(30, 144, 255, 0.5);
 }
 
 #playButton {
   padding: 15px 25px;
   font-size: 22px;
   color: white;
-  background-color: #1E90FF; /* Blauwe knop */
+  background-color: #1E90FF; 
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0px 5px 15px rgba(30, 144, 255, 0.4); /* Blauwe schaduw */
+  box-shadow: 0px 5px 15px rgba(30, 144, 255, 0.4);
 }
 
 #playButton:hover {
-  background-color: #4682B4; /* Donkerder blauw bij hover */
+  background-color: #4682B4;
   transform: scale(1.1);
-  box-shadow: 0px 5px 20px rgba(30, 144, 255, 0.6); /* Intensievere blauwe schaduw */
+  box-shadow: 0px 5px 20px rgba(30, 144, 255, 0.6); 
 }
 
-/* Game container and other styles */
 .game-container {
   position: relative;
   display: flex;
@@ -115,7 +114,7 @@ body {
   font-size: 32px;
   font-weight: bold;
   z-index: 10;
-  color: #00ff88; /* Groen voor score */
+  color: #00ff88;
   text-shadow: 2px 2px 5px #000;
 }
 
