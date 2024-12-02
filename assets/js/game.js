@@ -3,13 +3,14 @@ let obstacles = [];
 let score = 0;
 let gameOver = false;
 let spaceshipImage, obstacleImages = [], backgroundImg;
+let gameStarted = false;
 
 class Spaceship {
   constructor() {
-    this.size = width * 0.1; 
+    this.size = width * 0.1;
     this.x = width / 2 - this.size / 2;
     this.y = height - this.size - 20;
-    this.speed = width * 0.005; 
+    this.speed = width * 0.005;
   }
 
   update() {
@@ -38,8 +39,8 @@ class Spaceship {
 class Obstacle {
   constructor() {
     this.x = random(width);
-    this.y = -random(50, 150); // Start boven het scherm
-    this.size = random(width * 0.05, width * 0.1); // Obstakel grootte als percentage van de breedte
+    this.y = -random(50, 150);
+    this.size = random(width * 0.05, width * 0.1);
     this.speed = random(3, 6);
     this.image = random(obstacleImages);
   }
@@ -74,10 +75,22 @@ function setup() {
   const canvas = createCanvas(container.offsetWidth, container.offsetHeight);
   canvas.id('gameCanvas');
   canvas.parent(container);
+  
+  const playButton = document.getElementById('playButton');
+  playButton.addEventListener('click', startGame);
+}
+
+function startGame() {
+  gameStarted = true;
   spaceship = new Spaceship();
+  
+  document.getElementById('instructions').style.display = 'none';
+  document.querySelector('.game-container').style.display = 'block';
 }
 
 function draw() {
+  if (!gameStarted) return;
+
   if (gameOver) {
     displayGameOver();
     return;
@@ -132,10 +145,4 @@ function resetGame() {
   
   const gameOverMessage = document.getElementById('gameOverMessage');
   gameOverMessage.classList.remove('show');
-}
-
-function windowResized() {
-  const container = document.querySelector('.game-container');
-  resizeCanvas(container.offsetWidth, container.offsetHeight);
-  spaceship = new Spaceship(); 
 }

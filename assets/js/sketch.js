@@ -40,7 +40,7 @@ function setup() {
 }
 
 function draw() {
-  background(0, 20);
+  background(0, 20); 
 
   drawMoon();
 
@@ -67,7 +67,7 @@ function draw() {
       star.speedY = star.originalSpeedY;
     }
 
-    fill(255);
+    fill(255, 255, 255, 200); 
     ellipse(star.x, star.y, star.size, star.size);
 
     if (star.x < 0 || star.x > width) {

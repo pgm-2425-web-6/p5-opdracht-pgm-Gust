@@ -7,11 +7,19 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/game.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-
 </head>
 <body>
   <a href="index.html" class="home-link">← Back to Home</a>
   <div class="game-container">
+    <!-- Instructies en Play-knop -->
+    <div class="instructions" id="instructions">
+      <h1>Spaceship Game</h1>
+      <p>Welcome to the Spaceship Game!</p>
+      <p>Your goal is to avoid the obstacles falling from above. Use the arrow keys to move your spaceship.</p>
+      <button id="playButton">Play</button>
+    </div>
+
+    <!-- Game en score -->
     <div class="score-board">Score: <span id="score">0</span></div>
     <canvas id="gameCanvas"></canvas>
     <div class="game-over-message" id="gameOverMessage">
@@ -20,7 +28,8 @@
       <div class="restart-instruction">Press SPACE to restart</div>
     </div>
   </div>
+  
   <script src="assets/js/sketch.js"></script>
-    <script src="assets/js/game.js"></script>
+  <script src="assets/js/game.js"></script>
 </body>
 </html>
